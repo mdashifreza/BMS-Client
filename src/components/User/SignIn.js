@@ -12,7 +12,7 @@ function SignIn({ handleLogIn }) {
 
   const SignInData = async (e) => {
     e.preventDefault();
-    const res = await fetch("https://backend-tau-pied.vercel.app/users/signin",{
+    const res = await fetch("/users/signin",{
       method: "POST",
       headers: {
         "Content-Type": "application/json",
