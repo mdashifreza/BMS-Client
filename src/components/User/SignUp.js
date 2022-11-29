@@ -13,7 +13,7 @@ const SignUp = () => {
 
   const SignUpData = async (e) => {
     e.preventDefault();
-    const res = await fetch("https://server-armcusfte-mdashifreza.vercel.app/users/signup", {
+    const res = await fetch("https://server-weld-five.vercel.app/users/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
