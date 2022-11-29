@@ -11,7 +11,7 @@ function SignIn({ handleLogIn }) {
   const navigate = useNavigate();
 
   const SignInData = async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     const res = await fetch("https://backend-jade-seven.vercel.app/users/signin",{
       method: "POST",
       headers: {

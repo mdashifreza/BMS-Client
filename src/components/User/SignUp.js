@@ -12,7 +12,7 @@ const SignUp = () => {
   const navigate = useNavigate();
 
   const SignUpData = async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     const res = await fetch("https://backend-jade-seven.vercel.app/users/signup",{
       method: "POST",
       headers: {
