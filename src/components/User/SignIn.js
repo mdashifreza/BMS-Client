@@ -12,7 +12,7 @@ function SignIn({ handleLogIn }) {
 
   const SignInData = async (e) => {
     e.preventDefault();
-    const res = await fetch("/users/signin", {
+    const res = await fetch("https://bms-server.vercel.app/users/signin", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
