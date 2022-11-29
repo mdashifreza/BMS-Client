@@ -86,7 +86,7 @@ const MovieDetails = () => {
   const getMovieData = () => {
     try {
       axios
-        .get("https://bms-server.vercel.app/api/booking", {
+        .get("https://server-armcusfte-mdashifreza.vercel.app/api/booking", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -102,7 +102,7 @@ const MovieDetails = () => {
 
   //post to mongodb
   const postMovieData = async () => {
-    const response = await fetch("https://bms-server.vercel.app/api/booking", {
+    const response = await fetch("https://server-armcusfte-mdashifreza.vercel.app/api/booking", {
       method: "POST",
       body: JSON.stringify({
         movie: movieInfo.movie,
