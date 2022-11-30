@@ -13,7 +13,7 @@ const SignUp = () => {
 
   const SignUpData = async (e) => {
     // e.preventDefault();
-    const res = await fetch("https://backend-jade-seven.vercel.app/users/signup",{
+    const res = await fetch("/users/signup",{
       method: "POST",
       headers: {
         "Content-Type": "application/json",
