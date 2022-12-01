@@ -9,10 +9,10 @@ function SignIn({ handleLogIn }) {
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
-
+  const url ='https://bmsb.adaptable.app/';
   const SignInData = async (e) => {
     // e.preventDefault();
-    const res = await fetch("/users/signin",{
+    const res = await fetch(url+'/users/signin/',{
       method: "POST",
       headers: {
         "Content-Type": "application/json",
