@@ -9,15 +9,15 @@ import { useDispatch } from "react-redux";
 import { bindActionCreators } from "redux";
 import { actionCreators } from "../state/index";
 import Swal from "sweetalert2";
-// import bmsLogo from "../assets/logo.png";
 
 const MovieDetails = () => {
+  // dispatch updated state value
   const dispatch = useDispatch();
   const { updateActiveObject } = bindActionCreators(actionCreators, dispatch);
 
-  const url ='https://bmsb.adaptable.app/';
-
+  // handle function to persist movie-details in case of any unexpected page re-load
   const handleReloadPage = () => {
+    // store movie information in localStorage
     let data = localStorage.getItem("movieInfo");
     if (data) {
       return JSON.parse(localStorage.getItem("movieInfo"));
@@ -41,6 +41,7 @@ const MovieDetails = () => {
   const [movieInfo, setmovieInfo] = useState(handleReloadPage);
   localStorage.setItem("movieInfo", JSON.stringify(movieInfo));
 
+  //Last Booking Details
   const [lastBookingData, setLastBookingData] = useState([]);
 
   //update Movie-Name
@@ -67,11 +68,9 @@ const MovieDetails = () => {
 
   // update Seat-Slots
   const handleSeatSlot = (seatData) => {
-    // if (movieInfo) {
     const findSeat = movieInfo.seat.findIndex(
-      (el) => el.seatType === seatData.seatType
+      (e) => e.seatType === seatData.seatType
     );
-
     const newSeatData = [...movieInfo.seat];
     newSeatData[findSeat] = seatData;
     setmovieInfo((previous) => {
@@ -80,15 +79,13 @@ const MovieDetails = () => {
         seat: newSeatData,
       };
     });
-    // }
     localStorage.setItem("movieInfo", JSON.stringify(movieInfo));
   };
-
   // Endpoint:Fetch API GET request using async/await
   const getMovieData = () => {
     try {
       axios
-        .get(url+'/api/booking/',{
+        .get("https://bookmyshow-project-backend.vercel.app/api/booking", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -102,9 +99,9 @@ const MovieDetails = () => {
     }
   };
 
-  //post to mongodb
+  // Endpoint:Fetch API POST request using async/await
   const postMovieData = async () => {
-    const response = await fetch(url+'/api/booking/',{
+    const response = await fetch("https://bookmyshow-project-backend.vercel.app/api/booking",{
       method: "POST",
       body: JSON.stringify({
         movie: movieInfo.movie,
@@ -126,7 +123,7 @@ const MovieDetails = () => {
     });
     const content = await response.json();
     if (content._id) {
-      // alert(" booked successfully " + content._id);
+      //alert message using SweetAlert npm package
       Swal.fire(
         "Book that Show",
         "Tickets are Booked successfully!",
@@ -145,34 +142,32 @@ const MovieDetails = () => {
           { seatType: "D2", seats: 0 },
         ],
       });
+
       // Removing Selected Seat
       localStorage.setItem("activeObject", JSON.stringify(""));
       updateActiveObject("");
     } else {
-      // alert(" Ops try again ");
       Swal.fire("Oops..", `${content.errors[0].msg}!`, "error");
     }
   };
 
-  //Validation for Book Now button
+  //handle function for Book Now Button
   const handleSubmit = () => {
-    // console.log(movieInfo);
     postMovieData();
   };
 
   useEffect(() => {
     getMovieData();
-    // setmovieInfo(handleReloadPage)
   }, []);
 
   return (
     <div className="bg-gray-100 pb-6">
       <div>
         {/* Header */}
-        <h1 className="text-3xl font-bold py-6 px-4">Book that Show!</h1>
-        {/* <img src={bmsLogo} alt="BookMyShow" className="mx-2 w-40"/> */}
+        <h1 className="text-3xl font-bold py-6 px-4 ml-1">Book that Show!</h1>
         <div className="flex justify-center bg-white p-6 mx-4 rounded-md drop-shadow-md">
           <div>
+            {/* Movie-Name */}
             <div className="pb-4">
               <MovieName
                 handleMovieName={handleMovieName}
@@ -180,10 +175,12 @@ const MovieDetails = () => {
               />
             </div>
 
+            {/* Movie-Time */}
             <div className="pb-4">
               <TimeSlot handleTimeSlot={handleTimeSlot} movieInfo={movieInfo} />
             </div>
 
+            {/* Seat-Slot */}
             <div className="pb-4">
               <SeatSlot
                 handleSeatSlot={handleSeatSlot}
@@ -194,12 +191,14 @@ const MovieDetails = () => {
 
             {/* Book Now Submit Button */}
             <button
-              className="mx-4 px-4 py-1  font-medium text-lg text-white bg-gradient-to-r from-cyan-400 to-emerald-400 border-none rounded-lg shadow-lg shadow-emerald-300"
+              className="mx-4 px-4 py-1  font-medium text-lg text-white bg-gradient-to-r from-cyan-400 to-emerald-400 border-none rounded-lg shadow-lg shadow-emerald-300 transition ease-in-out delay-150 hover:translate-y-1 hover:scale-110  duration-150"
               onClick={handleSubmit}
             >
               Book Now
             </button>
           </div>
+
+          {/* Last Booking Details Container */}
           <div>
             <LastBooking lastBookingData={lastBookingData} />
           </div>

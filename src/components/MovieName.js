@@ -2,48 +2,24 @@ import React from "react";
 import { movies } from "../data/data";
 
 const MovieName = ({handleMovieName, movieInfo}) => {
-  // const [movieNameData, setmovieNameData] = useState({
-  //   activeObject: null,
-  //   dataName: [...movies],
-  // });
-  const movieNameData = [...movies];
-
-  //toggle class to change background color of active Movie-Name
-  // function ToggleName(index) {
-  //   setmovieNameData({
-  //     ...movieNameData,
-  //     activeObject: movieNameData.dataName[index],
-  //   });
-  // }
-  // function toggleActiveName(index) {
-  //   if (movieNameData.dataName[index] === movieNameData.activeObject) {
-  //     console.log(movieNameData.activeObject);
-  //     return "index-active";
-  //   } else {
-  //     return "index-inactive";
-  //   }
-  // }
   
+  // copy movies array elements into movieNameData
+  const movieNameData = [...movies];
 
   return (
     <div>
       <div className="mx-4 p-2 border rounded-md border-slate-600">
+        
         {/* Movie-Name Selector */}
         <p className="text-2xl  py-4 font-bold">Select a Movie</p>
-
+        
+        {/* Map through each movieNameData array elements  */}
         {movieNameData.map((item, index) => (
           <button
             key={index}
-            style={{
-              padding: "0.5rem",
-              margin: "0.2rem",
-              border: "2px solid black",
-              borderRadius: "0.8rem",
-              fontWeight: "bold",
-            }}
-            className={`${movieInfo.movie === item ? "bg-[#d37373] rounded-md text-white" : ""} transition-all duration-200`}
+            
+            className={`${movieInfo.movie === item ? "bg-[#d37373] rounded-md text-white" : ""} font-bold border-2 border-black m-3 p-[0.5rem] rounded-xl transition ease-in-out delay-150 hover:translate-y-1 hover:scale-110 hover:bg-[#d37373] duration-150`}
             onClick={() => {
-              // ToggleName(index);
               handleMovieName(item)
             }}
           >
