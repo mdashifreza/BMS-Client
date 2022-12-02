@@ -10,10 +10,10 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
-  // const url ='https://bmsb.adaptable.app/';
+  const url ='https://bmsb.adaptable.app/';
   const SignUpData = async (e) => {
     // e.preventDefault();
-    const res = await fetch('/users/signup/',{
+    const res = await fetch(url+'/users/signup/',{
       method: "POST",
       headers: {
         "Content-Type": "application/json",

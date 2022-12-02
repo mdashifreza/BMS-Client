@@ -15,7 +15,7 @@ const MovieDetails = () => {
   const dispatch = useDispatch();
   const { updateActiveObject } = bindActionCreators(actionCreators, dispatch);
 
-  // const url ='https://bmsb.adaptable.app/';
+  const url ='https://bmsb.adaptable.app/';
 
   const handleReloadPage = () => {
     let data = localStorage.getItem("movieInfo");
@@ -88,7 +88,7 @@ const MovieDetails = () => {
   const getMovieData = () => {
     try {
       axios
-        .get('/api/booking/',{
+        .get(url+'/api/booking/',{
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -104,7 +104,7 @@ const MovieDetails = () => {
 
   //post to mongodb
   const postMovieData = async () => {
-    const response = await fetch('/api/booking/',{
+    const response = await fetch(url+'/api/booking/',{
       method: "POST",
       body: JSON.stringify({
         movie: movieInfo.movie,
