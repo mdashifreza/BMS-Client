@@ -1,0 +1,5 @@
+{
+    "api":  {
+        "target": "https://bookmyshow-project-backend.vercel.app/"
+    }
+}
