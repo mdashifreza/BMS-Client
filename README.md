@@ -1,70 +1,116 @@
-# Getting Started with Create React App
+<div id="header" align="center">
+  <img src="https://cdn-icons-png.flaticon.com/128/8841/8841503.png" width="100"/>
+</div>
+<div align="center">
+<h2>Hello ! <h2>
+  <p> Md Ashif Reza !</p> 
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- Links to social profiles  -->
+<div id="badges" align="center">
+  <a href="https://www.linkedin.com/in/md-ashif-reza-55b217201//">
+    <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
+  </a>
+  <a href="https://youtu.be/Tnof6r5ZSyc">
+    <img src="https://img.shields.io/badge/YouTube-red?style=for-the-badge&logo=youtube&logoColor=white" alt="Youtube Badge"/>
+  </a>
+  <a href="https://twitter.com/Ashif_rez">
+    <img src="https://img.shields.io/badge/Twitter-blue?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter Badge"/>
+  </a>
+</div>
+  
+  ## Getting Started
 
-## Available Scripts
+Clone the repository on your local machine with the command below in your terminal, and cd into the **my-app**
 
-In the project directory, you can run:
+<!-- Insert repo link below -->
+
+```bash
+https://https://github.com/mdashifreza/BMSClient.git
+
+cd BMSClient
+```
+
+Install dependencies (if you are using yarn then do with that)
+
+```bash
+npm install
+```
 
 ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  <h2>Project Description</h2>
+  <b>Project Name : BookMyShow </b>
+  <a href ="https://bookmyshow-project-frontend.vercel.app/"/>
+  Live Here
+  </a>
+  <br>
+  <br>
+ </br>
 
-### `npm test`
+<b>Languages and Tools used: </b>
+ <div>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg" title="React" alt="React" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/redux/redux-original.svg" title="Redux" alt="Redux " width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-plain-wordmark.svg"  title="CSS3" alt="CSS" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg" title="HTML5" alt="HTML" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" title="JavaScript" alt="JavaScript" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/tailwindcss/tailwindcss-plain.svg" title="TailwindCSS" alt="JavaScript" width="40" height="40"/>&nbsp;
+  <img src="https://axios-http.com/assets/logo.svg" title="Axios" alt="JavaScript" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/mongodb/mongodb-original.svg" title="MongoDB" alt="MongoDB" width="40" height="40"/>&nbsp;
+  <img src="https://avatars.githubusercontent.com/u/10251060?s=200&v=4" title="Postman" alt="Postman" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/nodejs/nodejs-original.svg" title="NodeJS" alt="NodeJS" width="40" height="40"/>&nbsp;
+  <img src="https://pngimage.net/wp-content/uploads/2018/05/express-js-png-5.png" title="ExpressJS" alt="ExpressJS" width="40" height="40"/>&nbsp;
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+</div><br>
 
-### `npm run build`
+<b>Team Collaborators: </b>
+  
+  <p>➤ Md Ashif Reza</p>
+  <p>➤ Ritu Verma</p>
+  <p>➤ Saad Ansari </p>
+  <p>➤ Kaustubh Sule</p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<b>Project Components:</b><br>
+<!-- Main UI -->
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<b>➤ Main UI :</b> This window represents the main user interface of our web application.
+<br></br><img src="https://github.com/sulekaustubh/BookMyShow-screenshots/blob/main/final-ui.jpeg" width="1200" height="500"/><br></br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<!-- Select Movie Slot -->
 
-### `npm run eject`
+<b>➤ Movie name selection :</b> This component allows the user to select a movie of choice.
+<br></br><img src="https://github.com/sulekaustubh/BookMyShow-screenshots/blob/main/select-movie.jpeg" width="1200" height="150"/><br></br>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<!-- Select Time Slot -->
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<br><b>➤ Time slot selection:</b> This component displays all the available time slots throughout the day. The user can select according to preference.
+<br></br><img src="https://github.com/sulekaustubh/BookMyShow-screenshots/blob/main/select-time.jpg" width="1200" height="150"/><br></br>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<!-- Select Seat Type & Quantity -->
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<br><b>➤ Seat Type & Quantity :</b> This component enables user to select a specific seat type and the quantity of seats required. The maximum amount available per user is limited to 10 seats.
+<br></br><img src="https://github.com/sulekaustubh/BookMyShow-screenshots/blob/main/select-seat.jpeg" width="1200" height="150"/><br></br>
 
-## Learn More
+<!-- Book Now Button -->
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<br><b>➤ Book Now button:</b> This button confirms the user's choices and displays a message to the user that his/her seats have been successfully booked.
+<br></br><img src="https://github.com/sulekaustubh/BookMyShow-screenshots/blob/main/book-now.jpg" width="150" height="70"/><br></br>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<!-- Last Booking Details -->
 
-### Code Splitting
+<br><b>➤ Last Booking Details:</b> If the user is a returning customer and has previously booked for a movie, this component will display his/her last booking details.  
+<br></br><img src="https://github.com/sulekaustubh/BookMyShow-screenshots/blob/main/last-booking-details.jpeg" width="400" height="400"/><br></br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<!-- New User Sign-up -->
 
-### Analyzing the Bundle Size
+<br><b>➤ Sign-up:</b> This component allows new users to sign-up with a username, email and a password. The password is encrypted using the bcrypt library. If an existing user tries to sign-up, a message is displayed to the user for the same.
+<br></br><img src="https://github.com/sulekaustubh/BookMyShow-screenshots/blob/main/sign-up.png" width="1000" height="450"/><br></br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<!-- Existing User Login -->
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<br><b>➤ User Login:</b> Here, an existing user can log-in using his/her login credentials. And, their previous booking details are also displayed on the component 'Last Booking Details'.  
+<br></br><img src="https://github.com/sulekaustubh/BookMyShow-screenshots/blob/main/sign-in.png" width="1000" height="450"/><br></br>
