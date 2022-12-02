@@ -5,16 +5,14 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 function SignIn() {
-  
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
   //Redirect page towards Book that Show Ticket Booking App upon successful user sign-in
   const navigate = useNavigate();
   //Endpoint:Fetch API POST request using async/await
   const SignInData = async (e) => {
     e.preventDefault();
-    const res = await fetch('https://bookmyshow-project-backend.vercel.app/users/signin', {
+    const res = await fetch("https://bookmyshow-project-backend.vercel.app/users/signin",{
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -42,8 +40,6 @@ function SignIn() {
       Swal.fire("Oops..", `${data.message}!`, "error");
     }
   };
-
-  
   //handle functions for Email and Password
   const handleEmail = (e) => {
     setEmail(e.target.value);
@@ -52,11 +48,9 @@ function SignIn() {
     setPassword(e.target.value);
   };
   
-  
   return (
     <>
       <div>
-        
         {/* main section of sign-in page */}
         <section className="h-screen">
           <div className="px-6 h-full text-gray-800">

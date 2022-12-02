@@ -85,7 +85,7 @@ const MovieDetails = () => {
   const getMovieData = () => {
     try {
       axios
-        .get("https://bookmyshow-project-backend.vercel.app/api/booking", {
+        .get("https://bookmyshow-project-backend.vercel.app/api/booking",{
           method: "GET",
           headers: {
             "Content-Type": "application/json",

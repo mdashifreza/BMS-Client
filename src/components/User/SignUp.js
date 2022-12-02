@@ -14,7 +14,7 @@ const SignUp = () => {
   //Endpoint:Fetch API POST request using async/await
   const SignUpData = async (e) => {
     e.preventDefault();
-    const res = await fetch('https://bookmyshow-project-backend.vercel.app/users/signup', {
+    const res = await fetch("https://bookmyshow-project-backend.vercel.app/users/signup",{
       method: "POST",
       headers: {
         "Content-Type": "application/json",
