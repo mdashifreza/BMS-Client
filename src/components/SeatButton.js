@@ -10,12 +10,12 @@ function SeatButton({ item, index, handleSeatSlot,ToggleSeats }) {
   const handleDecrement = () => {
     if (seatNumber > 0) {
       setSeatNumber((seatNumber) => seatNumber - 1);
-       }
+      }
   };
   
   //handle function for seats increment counter
   const handleIncrement = () => {
-    if (seatNumber < 10) {
+    if (seatNumber < 9) {
       setSeatNumber((seatNumber) => seatNumber + 1);
     }
   };
