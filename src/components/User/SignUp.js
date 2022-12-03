@@ -8,13 +8,13 @@ const SignUp = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  
+  const url="https://bookmyshow-project-backend.vercel.app"
   //Redirect page towards Book that Show Ticket Booking App upon successful user sign-in
   const navigate = useNavigate();
   //Endpoint:Fetch API POST request using async/await
   const SignUpData = async (e) => {
     e.preventDefault();
-    const res = await fetch("https://bookmyshow-project-backend.vercel.app/users/signup",{
+    const res = await fetch(url+"/users/signup",{
       method: "POST",
       headers: {
         "Content-Type": "application/json",

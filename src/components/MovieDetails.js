@@ -81,12 +81,12 @@ const MovieDetails = () => {
     });
     localStorage.setItem("movieInfo", JSON.stringify(movieInfo));
   };
-
+  const url="https://bookmyshow-project-backend.vercel.app"
   // Endpoint:Fetch API GET request using async/await
   const getMovieData = () => {
     try {
       axios
-        .get("https://bookmyshow-project-backend.vercel.app/api/booking", {
+        .get(url+"/api/booking", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -102,7 +102,7 @@ const MovieDetails = () => {
 
   // Endpoint:Fetch API POST request using async/await
   const postMovieData = async () => {
-    const response = await fetch("https://bookmyshow-project-backend.vercel.app/api/booking", {
+    const response = await fetch(url+"/api/booking", {
       method: "POST",
       body: JSON.stringify({
         movie: movieInfo.movie,
