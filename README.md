@@ -2,16 +2,16 @@
   <img src="https://cdn-icons-png.flaticon.com/128/8841/8841503.png" width="100"/>
 </div>
 <div align="center">
-<h2>Hello ! <h2>
-  <p> Md Ashif Reza !</p> 
+<h2>Bookmyshow Client<h2>
+  <p>Md Ashif Reza !</p> 
 </div>
 
 <!-- Links to social profiles  -->
 <div id="badges" align="center">
-  <a href="https://www.linkedin.com/in/md-ashif-reza-55b217201//">
+  <a href="https://www.linkedin.com/in/md-ashif-reza-55b217201/">
     <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
   </a>
-  <a href="https://youtu.be/Tnof6r5ZSyc">
+  <a href="https://youtu.be/JkI1acKmYl0">
     <img src="https://img.shields.io/badge/YouTube-red?style=for-the-badge&logo=youtube&logoColor=white" alt="Youtube Badge"/>
   </a>
   <a href="https://twitter.com/Ashif_rez">
@@ -26,9 +26,9 @@ Clone the repository on your local machine with the command below in your termin
 <!-- Insert repo link below -->
 
 ```bash
-https://https://github.com/mdashifreza/BMSClient.git
+git clone https://github.com/mdashifreza/BMS-Client.git
 
-cd BMSClient
+cd BMS-Client
 ```
 
 Install dependencies (if you are using yarn then do with that)
@@ -44,7 +44,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
   <h2>Project Description</h2>
   <b>Project Name : BookMyShow </b>
-  <a href ="https://bookmyshow-project-frontend.vercel.app/"/>
+  <a href ="https://bookmyshow-project-frontend.vercel.app"/>
   Live Here
   </a>
   <br>
@@ -70,8 +70,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 <b>Team Collaborators: </b>
   
   <p>➤ Md Ashif Reza</p>
-  <p>➤ Ritu Verma</p>
   <p>➤ Saad Ansari </p>
+  <p>➤ Ritu Verma</p>
   <p>➤ Kaustubh Sule</p>
 
 <b>Project Components:</b><br>
